@@ -10,7 +10,7 @@ public class Wanderer : MonoBehaviour
     internal Transform thisTransform;
 
     // The movement speed of the object
-    public float moveSpeed = 0.2f;
+    public float moveSpeed = 0.5f;
 
     // A minimum and maximum time delay for taking a decision, choosing a direction to move in
     public Vector2 decisionTime = new Vector2(1, 4);
