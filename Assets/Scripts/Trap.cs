@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject TrapFX;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("Child detected!");
+        GameObject e = Instantiate(TrapFX) as GameObject;
+        e.transform.position = transform.position;
     }
 }
