@@ -74,8 +74,8 @@ public class GameManager : MonoBehaviour
         SpawnChild(Width, Height);
         PlaceTrap(worldPosition);
 
-        //detects collision still WORK IN PROGRESS
-        foreach (GameObject singleChild in Children)
+        //detects collision still WORK IN PROGRESS - planning to scrap it in favour of different method
+/*        foreach (GameObject singleChild in Children)
         {
            foreach(GameObject Trap in Traps)
             {
@@ -84,6 +84,6 @@ public class GameManager : MonoBehaviour
                     print("touching");
                 }
             }
-        }
+        }*/
     }
 }
