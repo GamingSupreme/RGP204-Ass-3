@@ -5,10 +5,16 @@ using UnityEngine;
 public class Trap : MonoBehaviour
 {
     public GameObject TrapFX;
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("Child detected!");
-        GameObject e = Instantiate(TrapFX) as GameObject;
-        e.transform.position = transform.position;
+        if ((other.tag == "Child") && (Input.GetKeyDown(KeyCode.Space)))
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Child detected!");
+            GameObject e = Instantiate(TrapFX) as GameObject;
+            e.transform.position = transform.position;
+            
+        }
     }
 }
