@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    public GameObject TrapFX;
+    public Wanderer Wanderer;
+    public AnimationClip TrapFX;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Child detected!");
-        GameObject e = Instantiate(TrapFX) as GameObject;
-        e.transform.position = transform.position;
+        AnimationClip e = Instantiate(TrapFX) as AnimationClip;
+        Wanderer.TrappedState();
     }
 }

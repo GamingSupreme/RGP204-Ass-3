@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class Wanderer : MonoBehaviour
 {
+    public bool trap = false;
     internal Transform thisTransform;
 
     // The movement speed of the object
@@ -47,6 +48,11 @@ public class Wanderer : MonoBehaviour
 
             // Choose a movement direction, or stay in place
             ChooseMoveDirection();
+
+            if (trap == true)
+            {
+                return;
+            }
         }
     }
 
@@ -54,5 +60,10 @@ public class Wanderer : MonoBehaviour
     {
         // Choose whether to move sideways or up/down
         currentMoveDirection = Mathf.FloorToInt(Random.Range(0, moveDirections.Length));
+    }
+
+    public void TrappedState()
+    {
+        trap = true;
     }
 }
