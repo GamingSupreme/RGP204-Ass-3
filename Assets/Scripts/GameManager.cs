@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A) && (worldPos.y < -2))
         {
             GameObject placeTrap = Instantiate(Trap, worldPos, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("TrapPlaced");
             placeTrap.transform.position += new Vector3(0, 0, 1);
             placeTrap.transform.SetParent(TrapList);
             Traps.Add(placeTrap);

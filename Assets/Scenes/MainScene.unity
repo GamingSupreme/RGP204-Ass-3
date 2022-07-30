@@ -770,14 +770,14 @@ MonoBehaviour:
   - name: MenuButton
     clip: {fileID: 8300000, guid: 52c922c489835ae4290f81ad06a8aed6, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: MenuMusic
     clip: {fileID: 8300000, guid: 5c1398a7221682047a5164de869e11cf, type: 3}
     volume: 1
-    pitch: 0
-    loop: 0
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
   - name: EnvironmentNight
     clip: {fileID: 8300000, guid: faf3deb3a12096d4d9fe526660f5e098, type: 3}
@@ -788,13 +788,13 @@ MonoBehaviour:
   - name: TrapCaught
     clip: {fileID: 8300000, guid: a7a594c7b10a92741813bda6ac7fe60b, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: TrapPlaced
     clip: {fileID: 8300000, guid: c5c9d324079f40e49a67967a443b77d4, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: WitchCackle
