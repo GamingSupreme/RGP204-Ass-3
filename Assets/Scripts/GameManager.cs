@@ -74,16 +74,5 @@ public class GameManager : MonoBehaviour
         SpawnChild(Width, Height);
         PlaceTrap(worldPosition);
 
-        //detects collision still WORK IN PROGRESS
-        foreach (GameObject singleChild in Children)
-        {
-           foreach(GameObject Trap in Traps)
-            {
-                if (Trap.GetComponent<BoxCollider2D>().IsTouching(singleChild.GetComponent<CircleCollider2D>()) == true)
-                {
-                    print("touching");
-                }
-            }
-        }
     }
 }
