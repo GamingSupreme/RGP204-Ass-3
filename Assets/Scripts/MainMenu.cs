@@ -13,6 +13,11 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+        //Sound
+        FindObjectOfType<AudioManager>().StopPlaying("MenuMusic");
+        FindObjectOfType<AudioManager>().Play("MenuButton");
+        FindObjectOfType<AudioManager>().Play("EnvironmentDay");
+        //Sound
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void QuitGame()

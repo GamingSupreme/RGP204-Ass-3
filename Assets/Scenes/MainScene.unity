@@ -728,43 +728,43 @@ MonoBehaviour:
   - name: BubblingPot
     clip: {fileID: 8300000, guid: 88a05843ce2638d4b8e2cb1fb6341514, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Screaming3
     clip: {fileID: 8300000, guid: 380a82ec9a99beb439f00b335bd20543, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Screaming1
     clip: {fileID: 8300000, guid: 1da8307538915f04fa318792586a1619, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Screaming2
     clip: {fileID: 8300000, guid: 06e0269feae55a545a0fb4bd9ce4741a, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: EnvironmentDay
     clip: {fileID: 8300000, guid: bbfadf1d75af5a44983b69f2ca827536, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Eating
     clip: {fileID: 8300000, guid: 02b9f106a54f02b419fa66fc9f29c3fa, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Footsteps
     clip: {fileID: 8300000, guid: 8c3cb595c8aca03448267b2775fabd3c, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: MenuButton
@@ -782,7 +782,7 @@ MonoBehaviour:
   - name: EnvironmentNight
     clip: {fileID: 8300000, guid: faf3deb3a12096d4d9fe526660f5e098, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: TrapCaught
@@ -800,7 +800,7 @@ MonoBehaviour:
   - name: WitchCackle
     clip: {fileID: 8300000, guid: 7c139657ef1ce564e8cde2582e024db2, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1450827666

@@ -12,9 +12,21 @@ public class Trap : MonoBehaviour
         {
             Destroy(other.gameObject);
             FindObjectOfType<AudioManager>().Play("TrapCaught");
+            int randomNumber = Random.Range(1, 4);
+            if (randomNumber == 1)
+            {
+                FindObjectOfType<AudioManager>().Play("Screaming1");
+            }
+            if (randomNumber == 2)
+            {
+                FindObjectOfType<AudioManager>().Play("Screaming2");
+            }
+            if (randomNumber == 3)
+            {
+                FindObjectOfType<AudioManager>().Play("Screaming3");
+            }
             ScoreManager.instance.AddPoint();
-            GameObject e = Instantiate(TrapFX) as GameObject;
-            e.transform.position = transform.position;
+            Destroy(this.gameObject);
         }
     }
 
