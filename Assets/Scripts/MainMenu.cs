@@ -5,8 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        //Sound
+        FindObjectOfType<AudioManager>().Play("MenuMusic");
+        //Sound
+    }
     public void PlayGame()
     {
+        //Sound
+        FindObjectOfType<AudioManager>().StopPlaying("MenuMusic");
+        FindObjectOfType<AudioManager>().Play("MenuButton");
+        FindObjectOfType<AudioManager>().Play("EnvironmentDay");
+        //Sound
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void QuitGame()
