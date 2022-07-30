@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Children;
     public List<GameObject> Traps;
 
+    public Vector3 worldPosition;
     bool spawned = false;
     float Height;
     float Width;
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
     void PlaceTrap(Vector3 worldPos)
     {
         //checks for player input then spawns a trap at the mouse location
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) && (worldPos.y < -2))
         {
             GameObject placeTrap = Instantiate(Trap, worldPos, Quaternion.identity);
             placeTrap.transform.position += new Vector3(0, 0, 1);
@@ -139,7 +140,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //gets the vector three position of the mouse in the scene
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //checks if these functions need to be called
         if (!spawned)
         {
