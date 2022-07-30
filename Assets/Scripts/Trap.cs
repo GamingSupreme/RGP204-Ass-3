@@ -11,10 +11,9 @@ public class Trap : MonoBehaviour
         if ((other.tag == "Child") && (Input.GetKeyDown(KeyCode.Space)))
         {
             Destroy(other.gameObject);
-            Debug.Log("Child detected!");
+            ScoreManager.instance.AddPoint();
             GameObject e = Instantiate(TrapFX) as GameObject;
             e.transform.position = transform.position;
-            
         }
     }
 }
