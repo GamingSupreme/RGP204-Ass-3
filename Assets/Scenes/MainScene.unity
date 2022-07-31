@@ -786,7 +786,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: TrapCaught
-    clip: {fileID: 8300000, guid: a7a594c7b10a92741813bda6ac7fe60b, type: 3}
+    clip: {fileID: 8300000, guid: 17f457e8f08060445853d7909a66ecee, type: 3}
     volume: 1
     pitch: 1
     loop: 0
