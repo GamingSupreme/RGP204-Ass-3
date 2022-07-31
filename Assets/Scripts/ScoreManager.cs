@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
 
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
     //public Text highscoreText;
 
     int score = 0;
@@ -20,7 +21,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString() + " ingredients!";
         //highscoreText.text = highscore.ToString();
     }
 
@@ -28,7 +29,7 @@ public class ScoreManager : MonoBehaviour
     public void AddPoint()
     {
         score += 1;
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString() + " ingredients!";
         Debug.Log(score);
     }
 }
