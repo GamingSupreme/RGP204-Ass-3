@@ -18,8 +18,17 @@ public class MainMenu : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("MenuButton");
         FindObjectOfType<AudioManager>().Play("EnvironmentDay");
         //Sound
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("MainScene");
     }
+
+    public void MainMenuFunc()
+    {
+        //Sound
+        FindObjectOfType<AudioManager>().Play("MenuMusic");
+        //Sound
+        SceneManager.LoadScene("StartMenu");
+    }
+
     public void QuitGame()
     {
         Debug.Log("The app has been terminated. Next!");

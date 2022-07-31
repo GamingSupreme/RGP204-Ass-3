@@ -534,6 +534,7 @@ MonoBehaviour:
   Children: []
   Traps: []
   worldPosition: {x: 0, y: 0, z: 0}
+  TrapLimit: 3
 --- !u!4 &1307811519
 Transform:
   m_ObjectHideFlags: 0
