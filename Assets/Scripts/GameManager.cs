@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This Tracks the traps and children, uses input to spawn in traps and children and also detects collision
@@ -37,10 +37,14 @@ public class GameManager : MonoBehaviour
     float Height;
     float Width;
 
+    public int TrapLimit = 3;
+
     private void Start()
     {
         //instantiate the player camera as the main camera
         PlayerCamera = Camera.main;
+
+        StartCoroutine(FinsihGame());
 
         Height = PlayerCamera.orthographicSize + 1;
         Width = PlayerCamera.orthographicSize * PlayerCamera.aspect + 1;
@@ -49,8 +53,9 @@ public class GameManager : MonoBehaviour
     void PlaceTrap(Vector3 worldPos)
     {
         //checks for player input then spawns a trap at the mouse location
-        if (Input.GetKeyDown(KeyCode.A) && (worldPos.y < -2))
+        if (Input.GetKeyDown(KeyCode.A) && (worldPos.y < -2) && (TrapLimit > 0))
         {
+            TrapLimit -= 1;
             GameObject placeTrap = Instantiate(Trap, worldPos, Quaternion.identity);
             FindObjectOfType<AudioManager>().Play("TrapPlaced");
             placeTrap.transform.position += new Vector3(0, 0, 1);
@@ -136,6 +141,16 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         spawned = false;
         SpawnChild(width, height);
+    }
+    private IEnumerator FinsihGame()
+    {
+        yield return new WaitForSeconds(60.0f);
+        TrapLimit = 3;
+        FindObjectOfType<AudioManager>().StopPlaying("EnvironmentDay");
+        FindObjectOfType<AudioManager>().StopPlaying("Screaming1");
+        FindObjectOfType<AudioManager>().StopPlaying("Screaming2");
+        FindObjectOfType<AudioManager>().StopPlaying("Screaming3");
+        SceneManager.LoadScene("EndMenu");
     }
 
     void Update()
