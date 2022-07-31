@@ -13,6 +13,7 @@ public class ScoreManager : MonoBehaviour
 
     int score = 0;
     //int highscore = 0;
+    public static int totalScore;
 
     private void Awake()
     {
@@ -23,6 +24,11 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = score.ToString();
         //highscoreText.text = highscore.ToString();
+    }
+
+    private void Update()
+    {
+        totalScore = score;
     }
 
     // Update is called once per frame
