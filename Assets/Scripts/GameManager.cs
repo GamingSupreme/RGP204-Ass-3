@@ -164,5 +164,9 @@ public class GameManager : MonoBehaviour
             StartCoroutine(SpawnKids(Width, Height));
         }
         PlaceTrap(worldPosition);
+
+       
     }
+
+    
 }
