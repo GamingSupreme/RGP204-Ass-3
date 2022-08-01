@@ -34,6 +34,8 @@ public class Trap : MonoBehaviour
             }
             GameManScript.TrapLimit += 1;
             ScoreManager.instance.AddPoint();
+            Destroy(this);
+            
             
         }
     }
