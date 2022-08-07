@@ -48,18 +48,18 @@ public class Wanderer : MonoBehaviour
             // Choose a movement direction, or stay in place
             ChooseMoveDirection();
         }
-
-        if (currentMoveDirection > 0)
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if (currentMoveDirection <= 0)
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
     }
 
     void ChooseMoveDirection()
     {
         // Choose whether to move sideways or up/down
         currentMoveDirection = Mathf.FloorToInt(Random.Range(0, moveDirections.Length));
+
+        if (moveDirections[currentMoveDirection].x < 0)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (moveDirections[currentMoveDirection].x >= 0)
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
     }
 }

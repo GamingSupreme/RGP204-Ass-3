@@ -23,6 +23,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         scoreText.text = score.ToString();
+        scoreText.text = string.Format("Score : {00} ", score);
         //highscoreText.text = highscore.ToString();
     }
 

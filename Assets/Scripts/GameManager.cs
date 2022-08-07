@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator FinsihGame()
     {
-        yield return new WaitForSeconds(20.0f);
+        yield return new WaitForSeconds(60.0f);
         TrapLimit = 3;
         FindObjectOfType<AudioManager>().StopPlaying("EnvironmentDay");
         FindObjectOfType<AudioManager>().StopPlaying("Screaming1");
@@ -164,5 +164,9 @@ public class GameManager : MonoBehaviour
             StartCoroutine(SpawnKids(Width, Height));
         }
         PlaceTrap(worldPosition);
+
+       
     }
+
+    
 }
